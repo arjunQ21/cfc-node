@@ -1,14 +1,22 @@
-const express = require("express")
-const router = express.Router() ;
+const express = require("express");
+const router = express.Router();
 
-router.get("/hi", function(req, res){
-    console.log(req.query)
-    res.send("Hello, " + req.query.name) ;
-})
+// getting data from query string
+router.get("/hi", function (req, res) {
+  console.log(req.query);
+  if (req.query.name != undefined) {
+    res.send("Hello, " + req.query.name);
+  } else {
+    res.send("Hello");
+  }
+});
 
-router.get("/bye", function(req, res){
+// getting JSON data from request body
+router.post("/bye", function(req, res){
+    console.log(req.body) ;
     res.send("Bye Bye")
 })
 
 
-module.exports = router ;
+
+module.exports = router;

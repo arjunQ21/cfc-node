@@ -18,13 +18,18 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000",
-    "url": "localhost:3000",
-    "method": "GET",
+    "url": "localhost:3000/bye",
+    "method": "POST",
     "sortNum": 0,
     "created": "2023-05-05T06:31:53.975Z",
-    "modified": "2023-05-05T06:31:53.975Z",
+    "modified": "2023-05-05T07:34:09.300Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Arjun\",\n  \"wardNo\": 25,\n  \"isMale\": true,\n  \"height\": 169.44,\n  \"favoriteColors\": [\"red\", \"blue\"]\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -36,9 +41,16 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-05-05T06:50:05.220Z",
-    "modified": "2023-05-05T07:14:47.304Z",
+    "modified": "2023-05-05T07:19:39.567Z",
     "headers": [],
-    "params": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "Shyam",
+        "isDisabled": true,
+        "isPath": false
+      }
+    ],
     "tests": []
   }
 ]
