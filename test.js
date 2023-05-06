@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const createNewPost = require("./functions")
 mongoose
   .connect(
     "mongodb+srv://cfc-demo-user:asdfasdf1@cluster0.i35rvgk.mongodb.net/cfc-db",
@@ -9,18 +9,12 @@ mongoose
   )
   .then(function () {
     console.log("Connected!!");
-    const Post = require("./db/posts");
-    Post.create({
-      content: "My Test Post",
-      createdAt: Date.now(),
-      createdBy: "Test Person",
-    }).then(function(post){
-      console.log("Post Created")
-    }).catch(function(error){
-      console.log("Error creating post: "+ error)
-    })
+
+  createNewPost("This is second post", "Shyam karki") ;
     // console.log(Post);
   })
   .catch(function (e) {
     console.log("Error connecting: " + e.toString());
   });
+
+
