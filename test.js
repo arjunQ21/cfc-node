@@ -1,15 +1,4 @@
-// importing express
-const express = require("express");
 const mongoose = require("mongoose");
-const routesFromAnotherFile = require("./routes");
-
-const httpServer = express();
-
-// middleware to parse json body
-httpServer.use(express.json());
-
-httpServer.use(routesFromAnotherFile);
-
 
 mongoose
   .connect(
@@ -19,10 +8,18 @@ mongoose
     {},
   )
   .then(function () {
-    console.log("Connected to DB!!");
-    httpServer.listen(3000, function () {
-      console.log("Server listening on port 3000");
-    });
+    console.log("Connected!!");
+    const Post = require("./db/posts");
+    Post.create({
+      content: "My Test Post",
+      createdAt: Date.now(),
+      createdBy: "Test Person",
+    }).then(function(post){
+      console.log("Post Created")
+    }).catch(function(error){
+      console.log("Error creating post: "+ error)
+    })
+    // console.log(Post);
   })
   .catch(function (e) {
     console.log("Error connecting: " + e.toString());
