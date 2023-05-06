@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const createNewPost = require("./functions");
+const mongoose = require("mongoose");
 const Post = require("./db/posts");
 
 // creating new Post
@@ -24,6 +25,18 @@ router.get("/", function (req, res) {
     .catch(function (error) {
       res.send("Error getting posts: " + error);
     });
+});
+
+// delete a post
+router.delete("/:postId", function (req, res) {
+  Post.deleteOne({_id: req.params.postId})
+  .then(function(post){
+    console.log(post)
+    res.send("Deleted") ;
+  })
+  .catch(function(err){
+    res.send("Error deleting: "+ err) ;
+  })
 });
 
 module.exports = router;

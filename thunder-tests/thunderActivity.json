@@ -3,12 +3,12 @@
     "_id": "21b204c7-45f2-456b-b499-0e3cecb75959",
     "colId": "history",
     "containerId": "",
-    "name": "www.google.com",
-    "url": "www.google.com",
-    "method": "GET",
+    "name": "Delete",
+    "url": "localhost:3000/6455dd4739a982c5605c11ce",
+    "method": "DELETE",
     "sortNum": 0,
     "created": "2023-05-05T06:29:52.586Z",
-    "modified": "2023-05-05T06:29:52.586Z",
+    "modified": "2023-05-06T10:26:48.680Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -22,12 +22,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-05-05T06:31:53.975Z",
-    "modified": "2023-05-06T05:59:31.798Z",
+    "modified": "2023-05-06T08:01:09.832Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"postContent\": \"Post from API 2\",\n  \"postCreatedBy\": \"THunder Client2\"\n}",
+      "raw": "{\n  \"postContent\": \"TO show in WebAppp\",\n  \"postCreatedBy\": \"Thunder client 123\"\n}",
       "form": []
     },
     "tests": []
