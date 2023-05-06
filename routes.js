@@ -1,22 +1,17 @@
 const express = require("express");
 const router = express.Router();
+const createNewPost = require("./functions");
 
-// getting data from query string
-router.get("/hi", function (req, res) {
-  console.log(req.query);
-  if (req.query.name != undefined) {
-    res.send("Hello, " + req.query.name);
-  } else {
-    res.send("Hello");
-  }
+router.post("/", function (req, res) {
+  // { postContent: 'Post from API', postCreatedBy: 'THunder Client' }
+
+  createNewPost(req.body.postContent, req.body.postCreatedBy)
+    .then(function (post) {
+      res.send("Post Created successfully");
+    })
+    .catch(function (error) {
+      res.send("Error Creating Post");
+    });
 });
-
-// getting JSON data from request body
-router.post("/bye", function(req, res){
-    console.log(req.body) ;
-    res.send("Bye Bye")
-})
-
-
 
 module.exports = router;

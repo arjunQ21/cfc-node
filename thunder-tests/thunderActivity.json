@@ -18,16 +18,16 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000",
-    "url": "localhost:3000/bye",
+    "url": "localhost:3000/",
     "method": "POST",
     "sortNum": 0,
     "created": "2023-05-05T06:31:53.975Z",
-    "modified": "2023-05-05T07:34:09.300Z",
+    "modified": "2023-05-06T05:59:31.798Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Arjun\",\n  \"wardNo\": 25,\n  \"isMale\": true,\n  \"height\": 169.44,\n  \"favoriteColors\": [\"red\", \"blue\"]\n}",
+      "raw": "{\n  \"postContent\": \"Post from API 2\",\n  \"postCreatedBy\": \"THunder Client2\"\n}",
       "form": []
     },
     "tests": []
