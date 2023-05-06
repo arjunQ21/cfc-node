@@ -37,11 +37,11 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000",
-    "url": "localhost:3000/hi",
+    "url": "localhost:3000/",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-05-05T06:50:05.220Z",
-    "modified": "2023-05-05T07:19:39.567Z",
+    "modified": "2023-05-06T06:21:56.791Z",
     "headers": [],
     "params": [
       {
